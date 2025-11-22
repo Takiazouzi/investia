@@ -1,0 +1,56 @@
+# =========================================================
+# Drupal / Composer / Lando recommended .gitignore
+# =========================================================
+
+# Composer dependencies
+/vendor/
+composer.lock
+
+# Drupal core
+/core/
+
+# Drupal files directory (user uploads)
+web/sites/default/files/
+web/sites/*/files/
+
+# Drupal private files (if used)
+private/
+
+# Config sync (if not using git for them — optional)
+# Uncomment if you sync config outside git
+# web/sites/default/files/config_*/sync/
+
+# Environment-specific files
+.env
+.env.local
+.env.*.local
+
+# Lando generated files
+.lando*
+/.lando.yml
+/.lando/local.yml
+/.lando/logs
+/.lando/tmp
+
+# Node modules (if using JS build tools)
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+*.cache
+
+# Drush
+.drush/
+/drush/contrib/
+/drush/commands/
+
+# PHPUnit
+/phpunit.xml
+/phpunit.xml.dist
+/.phpunit.result.cache
